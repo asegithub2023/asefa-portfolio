@@ -1,4 +1,6 @@
-// src/data/projects.ts
+// ==========================
+// 1. Interface
+// ==========================
 export interface Project {
   title: string;
   description: string;
@@ -8,13 +10,26 @@ export interface Project {
   liveLink?: string;
 }
 
+// ==========================
+// 2. Image Imports
+// ==========================
+import homeTutor from '../assets/projects/home-tutor.png';
+import ecommerce from '../assets/projects/ecommerce.png';
+import jobScraper from '../assets/projects/job-scraper.png';
+import taskDashboard from '../assets/projects/task-dashboard.png';
+import weather from '../assets/projects/weather.png';
+import jobScraper1 from '../assets/projects/job-scraper1.png';
+
+// ==========================
+// 3. Projects Data
+// ==========================
 export const projects: Project[] = [
   {
     title: "Home Tutor System",
     description:
       "A system connecting students and tutors with search, ratings, forums, and a streamlined request system.",
     techStack: "Python, Django, HTML, CSS, JavaScript",
-    image: "/src/assets/projects/home-tutor.png",
+    image: homeTutor,
     githubLink: "https://github.com/asegithub2023/django-project",
   },
   {
@@ -22,7 +37,7 @@ export const projects: Project[] = [
     description:
       "Mini e-commerce frontend with product listing, details, and cart functionality.",
     techStack: "React, TypeScript, Bootstrap",
-    image: "/src/assets/projects/ecommerce.png",
+    image: ecommerce,
     githubLink: "https://github.com/asegithub2023/ecommerce-catalog",
     liveLink: "https://ecommerce-catalogreact.netlify.app/",
   },
@@ -31,7 +46,7 @@ export const projects: Project[] = [
     description:
       "Extract structured data from PDF files into clean JSON using Python.",
     techStack: "Python, pdfplumber, jsonschema",
-    image: "/src/assets/projects/job-scraper.png",
+    image: jobScraper,
     githubLink: "https://github.com/asegithub2023/python-pdf-to-json-extractor",
   },
   {
@@ -39,7 +54,7 @@ export const projects: Project[] = [
     description:
       "Trello-like task management dashboard built with React and TypeScript.",
     techStack: "React, TypeScript",
-    image: "/src/assets/projects/task-dashboard.png",
+    image: taskDashboard,
     githubLink: "https://github.com/asegithub2023/task-management-dashboard",
     liveLink: "https://taskmanagementreactjs.netlify.app/",
   },
@@ -48,16 +63,16 @@ export const projects: Project[] = [
     description:
       "Weather application displaying real-time weather data.",
     techStack: "React, TypeScript",
-    image: "/src/assets/projects/weather.png",
+    image: weather,
     githubLink: "https://github.com/asegithub2023/weather-app",
-     liveLink: "https://weatherapptypescriptreact.netlify.app/",
+    liveLink: "https://weatherapptypescriptreact.netlify.app/",
   },
   {
     title: "Job Scraper & Report Generator",
     description:
       "Automated Python job scraper that collects jobs and generates reports.",
     techStack: "Python, Web Scraping",
-    image: "/src/assets/projects/job-scraper1.png",
+    image: jobScraper1,
     githubLink: "https://github.com/asegithub2023/job_scraper",
   },
 ];
