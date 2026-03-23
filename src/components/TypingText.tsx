@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from "react";
 
 interface TypingTextProps {
-  texts: string[];           // array of strings to loop
-  typingSpeed?: number;      // ms per character
-  deletingSpeed?: number;    // ms per character when deleting
-  pauseTime?: number;        // ms pause after typing full text
+  texts: string[]; // array of strings to loop
+  typingSpeed?: number; // ms per character
+  deletingSpeed?: number; // ms per character when deleting
+  pauseTime?: number; // ms pause after typing full text
 }
 
 const TypingText: React.FC<TypingTextProps> = ({
@@ -42,7 +42,15 @@ const TypingText: React.FC<TypingTextProps> = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, textIndex, texts, typingSpeed, deletingSpeed, pauseTime]);
+  }, [
+    displayedText,
+    isDeleting,
+    textIndex,
+    texts,
+    typingSpeed,
+    deletingSpeed,
+    pauseTime,
+  ]);
 
   return <span>{displayedText}</span>;
 };
